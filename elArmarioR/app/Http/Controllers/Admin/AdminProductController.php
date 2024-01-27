@@ -21,8 +21,12 @@ class AdminProductController extends Controller
     {
         Product::validate($request);
 
+        // Aquí añadir todo lo necesario para crear un producto (sea obligatorio o no)
+
         $newProduct = new Product();
         $newProduct->setName($request->input('name'));
+        $newProduct->setCategory($request->input('category'));
+
         $newProduct->setDescription($request->input('description'));
         $newProduct->setPrice($request->input('price'));
         $newProduct->setImage("game.png");

@@ -15,10 +15,8 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 {{-- El autofocus en el campo de entrada del formulario hace que dicho campo será seleccionado automáticamente cuando la página se cargue. --}}
-                                {{-- autofocus estaba después de required autocomplete="name" y entre ">" --}}
-                                {{-- Pero puesto en email para que haga más énfasis ahí y te mande al correo nada más crearte un usuario --}}
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -76,7 +74,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

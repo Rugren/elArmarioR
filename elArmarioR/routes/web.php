@@ -25,6 +25,7 @@ Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("
 Route::middleware('auth')->group(function () {
     Route::get('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
     Route::get('/my-account/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myaccount.orders");
+
 });
 
 Route::middleware('admin')->group(function () {
@@ -34,6 +35,12 @@ Route::middleware('admin')->group(function () {
     Route::delete('/admin/products/{id}/delete', 'App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
     Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
     Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
+
+    // Añadido las categorías (no se ven porque no se guardan en la bd, ver qué pasa)
+    Route::get('/admin/categories', 'App\Http\Controllers\Admin\AdminCategoriesController@index')->name("admin.categories.index");
+    Route::post('/admin/categories/store', 'App\Http\Controllers\Admin\AdminCategoriesController@store')->name("admin.categories.store");
+    Route::delete('/admin/categories/{id}/delete', 'App\Http\Controllers\Admin\AdminCategoriesController@delete')->name("admin.categories.delete");
+
 });
 
 // Añadida la ruta para los comentarios guardados

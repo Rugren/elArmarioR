@@ -23,7 +23,10 @@ class Product extends Model
     {
         $request->validate([
             "name" => "required|max:255",
-            "description" => "required",
+            /* añadida categoría (estos campos no están protegidos(protected) como los de User.php
+            Aún así, creado abajo los getters y setters de categoría) */
+            "category" => "nullable|max:255",
+            "description" => "nullable", // Teníamos obligatoria, pero quitado "description" => "required",
             "price" => "required|numeric|gt:0",
             'image' => 'image',
         ]);
@@ -58,6 +61,19 @@ class Product extends Model
     {
         $this->attributes['name'] = $name;
     }
+
+
+    // Añadido los getters y setters de la categoría:
+    public function getCategory()
+    {
+        return $this->attributes['category'];
+    }
+
+    public function setCategory($category)
+    {
+        $this->attributes['category'] = $category;
+    }
+
 
     public function getDescription()
     {

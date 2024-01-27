@@ -33,6 +33,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    /* $fillable es una propiedad que se utiliza en los modelos de Eloquent 
+    para especificar qué columnas de la tabla de la base de datos se pueden asignadas masivamente 
+    es decir, que puedo poner de golpe los campos 'name', 'email', 'password' todos a la vez. */
     protected $fillable = [
         'name',
         // añadido apellidos, dirección y teléfono (como están protegidos: protected, creado abajo los getters y setters)

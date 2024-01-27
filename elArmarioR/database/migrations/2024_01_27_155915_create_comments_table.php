@@ -22,7 +22,7 @@ return new class extends Migration
 
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            // comment es el texto del comentario, el comentario en sí, para no repetir el campo con la tabla comments
+            // "comment" es el texto del comentario, el comentario en sí, para no repetir el campo con la tabla "comments"
             $table->text('comment');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('user_id');

@@ -34,6 +34,17 @@
           </div>
         </div>
       </div>
+
+      {{-- La categoría del producto --}}
+      <div class="col">
+        <div class="mb-3 row">
+          <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+          <div class="col-lg-10 col-md-6 col-sm-12">
+            <input name="category" value="{{ old('category') }}" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col">
           <div class="mb-3 row">
@@ -66,6 +77,8 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
           <th scope="col">Edit</th>
           <th scope="col">Delete</th>
         </tr>
@@ -75,6 +88,10 @@
         <tr>
           <td>{{ $product->getId() }}</td>
           <td>{{ $product->getName() }}</td>
+
+          <td>{{ $product->getCategory() }}</td>
+          <td>{{ $product->getPrice() }}{{__('€')}}</td>
+
           <td>
             <a class="btn btn-primary" href="{{route('admin.product.edit', ['id'=> $product->getId()])}}">
               <i class="bi-pencil"></i>

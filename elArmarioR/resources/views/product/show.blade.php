@@ -60,14 +60,15 @@
 
         </div>
     </div>
+            {{-- Aquí muestra el/los comentarios: --}}
             <div class="col-md-12">
                 <div class="card-body">
+                  <h3>All of comments: </h3>
                     @forelse ($viewData['comment'] as $comment)
                         @if ($comment->getProductId() == $viewData['product']->getId())
                             <div class="comment">
                                 <h4 class="comment-user">{{ $comment->user->getName() }}</h4>
                                 <div class="comment-text">
-                                  {{-- Aquí muestra el/los comentarios: --}}
                                     {{ $comment->comment }}
                                 </div>
                                 {{-- Puesto un <br> de separador para que se vea mejor entre comentario y comentario --}}
@@ -79,7 +80,7 @@
                     @endforelse
                 </div>
             </div>
-    </div> 
+    </div>
 
 @endsection
 
