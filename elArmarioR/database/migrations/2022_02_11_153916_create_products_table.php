@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('image');
-            $table->double('price');
+            /* cambiado el int de precio a double para que se puedan poner decimales, 
+            aquí y en todos los apartados de 'price' de la web. */
+            $table->double('price'); 
             $table->timestamps();
         });
     }
