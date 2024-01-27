@@ -17,6 +17,10 @@ class AdminAuthMiddleware
      */
 
     // Si el rol es admin puedo acceder al CRUD para crear, modificar y eliminar productos.
+
+    /* En la migración: 2022_02_12_140820_alter_users_table.php
+    ya va por defecto que al crear el usuario, su rol sea cliente ('client'): 
+    $table->string('role')->default('client'); */
     public function handle(Request $request, Closure $next)
     {
         if (Auth::user() && Auth::user()->getRole() == 'admin') {
