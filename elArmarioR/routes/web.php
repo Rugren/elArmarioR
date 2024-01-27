@@ -36,4 +36,7 @@ Route::middleware('admin')->group(function () {
     Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
 });
 
+// Añadida la ruta para los comentarios guardados
+Route::post('/product/{id}/comment', 'App\Http\Controllers\CommentController@save')->name("comment.save");
+
 Auth::routes();
