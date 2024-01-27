@@ -90,6 +90,8 @@ return [
     |
     */
 
+    // aquí puede que se confunda? porque 'address' lo puse como dirección de vivienda, no de correo electrónico. 
+    // Aunque aquí supuestamente es la dirección de calle y el nombre.
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),

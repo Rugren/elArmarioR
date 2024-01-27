@@ -51,6 +51,12 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            /* añadido que se tenga que crear apellidos, dirección y teléfono (y abajo puesto también, necesario)
+            puestos 'nullable' para que no sea requerido u opcional. */
+            'surnames' => ['nullable', 'string', 'max:255'],
+            'address' => ['nullable', 'string', 'max:255'],
+            'phone' => ['nullable', 'integer'],
+
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -66,9 +72,16 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            // añadido que se tenga que crear apellidos, dirección y teléfono
+            'surnames' => $data['surnames'],
+            'address' => $data['address'],
+            'phone' => $data['phone'],
+            
             'email' => $data['email'],
+            // Hash::make es para que en la bd codifique la contraseña y no la veamos
             'password' => Hash::make($data['password']),
-            'balance' => 5000,
+            // que el usuario tenga mil al crearse, anteriormente 5000
+            'balance' => 1000,
         ]);
     }
 }

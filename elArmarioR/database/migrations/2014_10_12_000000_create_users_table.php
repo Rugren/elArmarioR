@@ -16,6 +16,15 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+
+            // Para que al crearse pongan apellidos (meter en la tabla de registro web de los usuarios)
+            $table->string('surnames');
+            // Para que al crearse pongan dirección (meter en la tabla de registro web de los usuarios)
+            $table->string('address');
+            // Para que al crearse pongan número de teléfono (meter en la tabla de registro web de los usuarios)
+            $table->bigInteger('phone');
+            // $table->bigInteger('phone')->unique()->nullable();  // nullable porque no todos van a tener el mismo teléfono
+
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

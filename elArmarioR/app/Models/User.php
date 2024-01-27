@@ -35,6 +35,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        // añadido apellidos, dirección y teléfono (como están protegidos: protected, creado abajo los getters y setters)
+        'surnames',
+        'address',
+        'phone',
+
         'email',
         'password',
         'balance',
@@ -78,6 +83,38 @@ class User extends Authenticatable
     {
         $this->attributes['name'] = $name;
     }
+
+    // Creados los geter y seter de apellidos, dirección y teléfono
+    public function setSurnames($surnames)
+    {
+        $this->attributes['surnames'] = $surnames;
+    }
+    public function getSurnames()
+    {
+        return $this->attributes['surnames'];
+    }
+
+    public function setAddress($address)
+    {
+        $this->attributes['address'] = $address;
+    }
+
+    public function getAddress()
+    {
+        return $this->attributes['address'];
+    }
+
+    public function setPhone($phone)
+    {
+        $this->attributes['phone'] = $phone;
+    }
+
+    public function getPhone()
+    {
+        return $this->attributes['phone'];
+    }
+
+
 
     public function getEmail()
     {
