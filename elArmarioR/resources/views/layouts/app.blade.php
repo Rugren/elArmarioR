@@ -27,12 +27,6 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
 
-
-          {{-- FUNCIONA
-          Esto es para que nos diga el nombre de usuario y el rol que tenemos en la web: --}}
-          <a class="nav-link active">{{Auth::user()->getName()}} - {{Auth::user()->getRole()}}</a>
-
-
           {{-- Ocultada para que no exista la Home y sea directamente a Products 
             <a class="nav-link active" href="{{ route('home.index') }}">Home</a> --}}
 
@@ -61,6 +55,11 @@
             <a role="button" class="nav-link active"
               onclick="document.getElementById('logout').submit();">{{__('Logout')}}</a>
             @csrf
+
+          {{-- FUNCIONA (Tiene que ir aquí dentro, si lo ponía al principio del panel, cuando me salía con el usuario daba fallos)
+          Esto es para que nos diga el Nombre de usuario, su dinero del Balance y el Rol que desempeña. Lo muestra en la web: --}}
+          <a class="nav-link active">{{Auth::user()->getName()}} / {{Auth::user()->getRole()}} ({{Auth::user()->getBalance()}}{{__('$')}})</a>
+
           </form>
 
           @endguest

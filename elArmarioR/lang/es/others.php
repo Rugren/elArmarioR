@@ -25,6 +25,4 @@ return [
     'ProductInformation' => ' - Información del producto',
     'AllOfComments' => 'Todos los comentarios',
 
-    'Create Products' => 'Crear Productos',
-
 ];

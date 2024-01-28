@@ -3,7 +3,7 @@
 @section('content')
 <div class="card mb-4">
   <div class="card-header">
-    Create Products
+    {{__('Create Products')}}
   </div>
   <div class="card-body">
     @if($errors->any())
@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col">
           <div class="mb-3 row">
-            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Name:</label>
+            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">{{__('Name:')}}</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
               <input name="name" value="{{ old('name') }}" type="text" class="form-control">
             </div>
@@ -27,9 +27,9 @@
         </div>
         <div class="col">
           <div class="mb-3 row">
-            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price:</label>
+            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">{{__('Price:')}}</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
-              <input name="price" value="{{ old('price') }}" type="double" class="form-control">
+              <input name="price" value="{{ old('price') }}" type="double" class="form-control" placeholder="Que no se te olvide ponerle un precio">
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
       {{-- La categoría del producto --}}
       <div class="col">
         <div class="mb-3 row">
-          <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+          <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">{{__('Category:')}}</label>
           <div class="col-lg-10 col-md-6 col-sm-12">
             <input name="category" value="{{ old('category') }}" type="text" class="form-control">
           </div>
@@ -48,7 +48,7 @@
       <div class="row">
         <div class="col">
           <div class="mb-3 row">
-            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
+            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">{{__('Image:')}}</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
               <input class="form-control" type="file" name="image">
             </div>
@@ -59,28 +59,28 @@
         </div>
       </div>
       <div class="mb-3">
-        <label class="form-label">Description</label>
+        <label class="form-label">{{__('Description')}}</label>
         <textarea class="form-control" name="description" rows="3">{{ old('description') }}</textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">{{__('Submit')}}</button>
     </form>
   </div>
 </div>
 
 <div class="card">
   <div class="card-header">
-    Manage Products
+    {{__('Manage Products:')}}
   </div>
   <div class="card-body">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Category</th>
-          <th scope="col">Price</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Delete</th>
+          <th scope="col">{{__('ID')}}</th>
+          <th scope="col">{{__('Name')}}</th>
+          <th scope="col">{{__('Category')}}</th>
+          <th scope="col">{{__('Price')}}</th>
+          <th scope="col">{{__('Edit')}}</th>
+          <th scope="col">{{__('Delete')}}</th>
         </tr>
       </thead>
       <tbody>
@@ -99,6 +99,7 @@
           </td>
           <td>
             <form action="{{ route('admin.product.delete', $product->getId())}}" method="POST">
+              {{-- Si hay un comentario en cualquier artículo, no lo borra (hecho esto para no perder los comentarios) --}}
               @csrf
               @method('DELETE')
               <button class="btn btn-danger">

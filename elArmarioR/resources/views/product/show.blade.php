@@ -63,7 +63,7 @@
             {{-- Aquí muestra el/los comentarios: --}}
             <div class="col-md-12">
                 <div class="card-body">
-                  <h3>All of comments: </h3>
+                  <h3>{{__('All of comments:')}} </h3>
                     @forelse ($viewData['comment'] as $comment)
                         @if ($comment->getProductId() == $viewData['product']->getId())
                             <div class="comment">

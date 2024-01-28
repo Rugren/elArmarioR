@@ -3,10 +3,11 @@
 @section('content')
 <div class="card">
   <div class="card-header">
-    Admin Panel - Home Page
+    {{-- Admin Panel - Home Page (así estaba en texto, como está abajo ya traduce a los idiomas--}}
+    {{__('Admin Panel - Home Page')}}
   </div>
   <div class="card-body">
-    Welcome to the Admin Panel, use the sidebar to navigate between the different options.
+    {{__('Welcome to the Admin Panel, use the sidebar to navigate between the different options.')}}
   </div>
 </div>
 @endsection

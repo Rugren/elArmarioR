@@ -257,13 +257,13 @@ return [
         'cadena' => 'El :attribute debe ser :size caracteres.',
         'array' => 'El :attribute debe contener :size elementos.',
     ],
-    'starts_with' => 'El :attribute debe comenzar con uno de los siguientes: :values.',
-    'string' => 'El :attribute debe ser una cadena.',
-    'timezone' => 'El :attribute debe ser una zona horaria válida.',
-    'unique' => 'El :attribute ya ha sido tomado.',
-    'uploaded' => 'El :attribute falló al cargar.',
-    'url' => 'El :attribute debe ser una URL válida.',
-    'uuid' => 'El :attribute debe ser un UUID válido.',
+    'starts_with' => ':attribute debe comenzar con uno de los siguientes: :values.',
+    'string' => ':attribute debe ser una cadena.',
+    'timezone' => ':attribute debe ser una zona horaria válida.',
+    'unique' => 'El :attribute ya ha sido registrado.',
+    'uploaded' => ':attribute falló al cargar.',
+    'url' => ':attribute debe ser una URL válida.',
+    'uuid' => ':attribute debe ser un UUID válido.',
 
 
 

@@ -65,6 +65,10 @@ class AdminProductController extends Controller
 
         $product = Product::findOrFail($id);
         $product->setName($request->input('name'));
+
+        // Para que coja las categorías, pero no estaba puesto antes (si fallase quitar, no hace nada)
+        $product->setCategory($request->input('category'));
+
         $product->setDescription($request->input('description'));
         $product->setPrice($request->input('price'));
 
@@ -78,6 +82,7 @@ class AdminProductController extends Controller
         }
 
         $product->save();
+        // Nos redirije al mismo panel dónde creamos los productos
         return redirect()->route('admin.product.index');
     }
 }
