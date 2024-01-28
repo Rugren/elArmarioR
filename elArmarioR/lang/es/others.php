@@ -11,7 +11,7 @@ return [
 
     'About' => 'Sobre nosotros',
     'TitleAbout' => 'Nosotros - elArmarioR',
-    'PurpouseAbout' => 'Nuestro propósito en el elArmarioR es vender la mayor cantidad de artículos de ropa y moda. En nuestra web cualquier podrá navegar por la página y encontrar información acerca de su vestimenta favorita',
+    'PurpouseAbout' => 'Nuestro propósito en el elArmarioR es vender la mayor cantidad de artículos de ropa y moda. En nuestra web cualquier podrá navegar por la página y encontrar información acerca de su vestimenta favorita.',
     'DevelopedAbout' => 'Desarrollado por Rubén García Ruiz',
     'TitleProducts' => 'Principal - elArmarioR',
     'Products' => 'Lista de productos',

@@ -159,7 +159,11 @@
     "Save changes": "Guardar cambios",
 
     "Email": "Correo electrónico",
+    "Email:": "Correo electrónico:",
     "Balance": "Saldo",
-    "Role": "Rol"
+    "Role": "Rol",
+
+    "Language": "Idioma",
+    "Language:": "Idioma:"
 
 }
