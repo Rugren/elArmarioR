@@ -28,18 +28,30 @@
         <div class="navbar-nav ms-auto">
           {{-- Ocultada para que no exista la Home y sea directamente a Products 
             <a class="nav-link active" href="{{ route('home.index') }}">Home</a> --}}
-          <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
-          <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>
-          <a class="nav-link active" href="{{ route('home.about') }}">About</a>
+
+          {{-- <a class="nav-link active" href="{{ route('product.index') }}">Products</a> --}}
+          <a class="nav-link active" href="{{ route('product.index') }}">{{__('Home')}}</a>
+
+          <a class="nav-link active" href="{{ route('cart.index') }}">{{__('Cart')}}</a>
+          <a class="nav-link active" href="{{ route('home.about') }}">{{__('About')}}</a>
+
+          
+          {{-- Esto es para que si estoy logeado pueda ver el panel de administrador,
+          Si estoy sin logearme(y/o no soy "admin") no puedo ver este panel para crear productos. FUNCIONA --}}
+          @if (Auth::user() && Auth::user()->getRole() == 'admin')
+          <a class="nav-link active" href="{{ route('admin.home.index') }}">{{__('Admin Panel')}}</a>
+          @endif
+
+
           <div class="vr bg-white mx-2 d-none d-lg-block"></div>
           @guest
-          <a class="nav-link active" href="{{ route('login') }}">Login</a>
-          <a class="nav-link active" href="{{ route('register') }}">Register</a>
+          <a class="nav-link active" href="{{ route('login') }}">{{__('Login')}}</a>
+          <a class="nav-link active" href="{{ route('register') }}">{{__('Register')}}</a>
           @else
-          <a class="nav-link active" href="{{ route('myaccount.orders') }}">My Orders</a>
+          <a class="nav-link active" href="{{ route('myaccount.orders') }}">{{__('My Orders')}}</a>
           <form id="logout" action="{{ route('logout') }}" method="POST">
             <a role="button" class="nav-link active"
-              onclick="document.getElementById('logout').submit();">Logout</a>
+              onclick="document.getElementById('logout').submit();">{{__('Logout')}}</a>
             @csrf
           </form>
           @endguest
