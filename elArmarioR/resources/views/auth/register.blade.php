@@ -16,6 +16,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                {{-- required autocomplete="name" (hace que el campo a escribir sea obligatorio) --}}
                                 {{-- El autofocus en el campo de entrada del formulario hace que dicho campo será seleccionado automáticamente cuando la página se cargue. --}}
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -30,7 +31,7 @@
                             <label for="surnames" class="col-md-4 col-form-label text-md-end">{{ __('Surnames') }}</label>
 
                             <div class="col-md-6">
-                                <input id="surnames" type="text" class="form-control @error('surnames') is-invalid @enderror" name="surnames" value="{{ old('surnames') }}" required autocomplete="surnames">
+                                <input id="surnames" type="text" class="form-control @error('surnames') is-invalid @enderror" name="surnames" value="{{ old('surnames') }}">
 
                                 @error('surnames')
                                     <span class="invalid-feedback" role="alert">
@@ -45,7 +46,7 @@
                             <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}">
 
                                 @error('address')
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +61,7 @@
                             <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}">
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">

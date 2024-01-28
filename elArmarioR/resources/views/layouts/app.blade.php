@@ -35,7 +35,7 @@
           <a class="nav-link active" href="{{ route('cart.index') }}">{{__('Cart')}}</a>
           <a class="nav-link active" href="{{ route('home.about') }}">{{__('About')}}</a>
 
-          
+
           {{-- Esto es para que si estoy logeado pueda ver el panel de administrador,
           Si estoy sin logearme(y/o no soy "admin") no puedo ver este panel para crear productos. FUNCIONA --}}
           @if (Auth::user() && Auth::user()->getRole() == 'admin')
@@ -54,6 +54,10 @@
               onclick="document.getElementById('logout').submit();">{{__('Logout')}}</a>
             @csrf
           </form>
+
+          {{-- Esto es para que nos diga el nombre de usuario y el rol que tenemos en la web: --}}
+          {{-- <a class="nav-link active">{{Auth::user()->getName()}} - {{Auth::user()->getRole()}}</a>  --}}
+
           @endguest
         </div>
       </div>

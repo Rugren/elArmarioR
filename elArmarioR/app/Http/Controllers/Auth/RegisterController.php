@@ -52,10 +52,13 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             /* añadido que se tenga que crear apellidos, dirección y teléfono (y abajo puesto también, necesario)
-            puestos 'nullable' para que no sea requerido u opcional. */
-            'surnames' => ['nullable', 'string', 'max:255'],
-            'address' => ['nullable', 'string', 'max:255'],
-            'phone' => ['nullable', 'integer'],
+            Si tengo required o nullable luego tengo que poner required autocomplete="phone" en register.blade.php en el formulario.
+            quitado en phone y los demás para que no sea requerido y sea opcional ese campo.
+            */
+
+            'surnames' => ['string', 'max:255'],
+            'address' => ['string', 'max:255'],
+            'phone' => ['integer'],
 
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
