@@ -83,6 +83,7 @@ return [
     */
 
     'locale' => 'en',
+    // idioma por defecto
 
     /*
     |--------------------------------------------------------------------------
@@ -96,6 +97,22 @@ return [
     */
 
     'fallback_locale' => 'en',
+    // si se ha solicitado un idioma inexistente pondrá el 'fallback_locale'
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available locales
+    |--------------------------------------------------------------------------
+    |
+    | List all locales that your application works with
+    |
+    */
+
+    'available_locales' => [
+        'English' => 'en',
+        'Español' => 'es',
+        // 'French' => 'fr',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -138,9 +155,9 @@ return [
 
     'providers' => [
 
-        /*
-         * Laravel Framework Service Providers...
-         */
+            /*
+             * Laravel Framework Service Providers...
+             */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -164,16 +181,16 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Package Service Providers...
-         */
+            /*
+             * Package Service Providers...
+             */
 
-        /*
-         * Application Service Providers...
-         */
+            /*
+             * Application Service Providers...
+             */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+            // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 

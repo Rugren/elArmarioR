@@ -18,6 +18,10 @@
       <a href="{{ route('admin.home.index') }}" class="text-white text-decoration-none">
         <span class="fs-4">Admin Panel</span>
       </a>
+
+      {{-- Metido aquí el @include para poder cambiar de idioma: @include('partials/language_switcher') --}}
+      @include('partials/language_switcher')
+
       <hr />
       <ul class="nav flex-column">
         <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Admin - Home</a></li>
@@ -31,7 +35,7 @@
     <div class="col content-grey">
       <nav class="p-3 shadow text-end">
         <span class="profile-font">Admin</span>
-        <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.svg') }}">
+        <img class="img-profile rounded-circle" src="{{ asset('/img/perfilRuben.jpg') }}">
       </nav>
 
       <div class="g-0 m-5">

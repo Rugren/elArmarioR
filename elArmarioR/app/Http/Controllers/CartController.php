@@ -22,8 +22,10 @@ class CartController extends Controller
         }
 
         $viewData = [];
-        $viewData["title"] = "Cart - Online Store";
-        $viewData["subtitle"] =  "Shopping Cart";
+        // $viewData["title"] = "Cart - Online Store";
+        $viewData["title"] = __('others.TitleCart');
+        // $viewData["subtitle"] =  "Shopping Cart";
+        $viewData["subtitle"] = __('others.Cart');
         $viewData["total"] = $total;
         $viewData["products"] = $productsInCart;
         return view('cart.index')->with("viewData", $viewData);
@@ -76,8 +78,10 @@ class CartController extends Controller
             $request->session()->forget('products');
 
             $viewData = [];
-            $viewData["title"] = "Purchase - Online Store";
-            $viewData["subtitle"] =  "Purchase Status";
+            /* $viewData["title"] = "Purchase - Online Store";
+            $viewData["subtitle"] =  "Purchase Status"; */
+            $viewData["title"] = __('others.TitlePurchase');
+            $viewData["subtitle"] =  __('others.Purchase');
             $viewData["order"] =  $order;
             return view('cart.purchase')->with("viewData", $viewData);
         } else {

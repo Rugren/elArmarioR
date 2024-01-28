@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// El inicio que estaba por defecto:
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name("product.index");
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name("product.show");
@@ -45,5 +47,22 @@ Route::middleware('admin')->group(function () {
 
 // Añadida la ruta para los comentarios guardados
 Route::post('/product/{id}/comment', 'App\Http\Controllers\CommentController@save')->name("comment.save");
+
+/*
+Route::get('/{locale?}', function ($locale = null) {
+    if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+        app()->setLocale($locale);
+    }
+    
+    return view('welcome');
+});
+*/
+
+Route::get('language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
+
 
 Auth::routes();

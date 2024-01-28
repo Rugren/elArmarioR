@@ -16,10 +16,16 @@ class HomeController extends Controller
     public function about()
     {
         $viewData = [];
-        $viewData["title"] = "About us - Online Store";
+        /* $viewData["title"] = "About us - Online Store";
         $viewData["subtitle"] =  "About us";
         $viewData["description"] =  "This is an about page ...";
-        $viewData["author"] = "Developed by: Your Name";
+        $viewData["author"] = "Developed by: Your Name"; */
+
+        $viewData["title"] = __('others.TitleAbout');
+        $viewData["subtitle"] =  __('others.About');
+        $viewData["description"] =   __('others.PurpouseAbout');
+        $viewData["author"] = __('others.DevelopedAbout');
+
         return view('home.about')->with("viewData", $viewData);
     }
 }
