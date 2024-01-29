@@ -36,6 +36,33 @@
         </div>
     </div>
 
+
+    {{-- ESTO PARA TEXTO ENRIQUECIDO --}}
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>
+        function initTinyMCE() {
+            tinymce.init({
+                selector: 'textarea#comment',
+                plugins: 'code table lists',
+                toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            initTinyMCE();
+        });
+
+        // Hay que agregar la función updateTextarea para que nos actualice el comentario y lo ponga con el texto enriquecido
+        function updateTextarea() {
+            var content = tinymce.get('comment').getContent();
+            document.getElementById('comment').value = content;
+        }
+    </script>
+
+
+
+
+    {{-- Esto para comentar --}}
     <div class="card mb-4">
       <div class="card-header">
         {{__('Comments of products')}}
@@ -55,7 +82,9 @@
                     </div>
                     <input type="hidden" name="product_id" value="{{ $viewData['product']->getId() }}">
                     <input type="hidden" name="user_id" value="{{ $viewData['userId'] }}">
-                    <button type="submit" class="btn btn-primary">{{__('Send')}}</button>
+                    {{-- <button type="submit" class="btn btn-primary">{{__('Send')}}</button> --}}
+                    {{-- Para el texto enriquecido --}}
+                    <button type="submit" class="btn btn-primary" onclick="updateTextarea()">{{__('Send')}}</button>
                 </form>
 
         </div>
