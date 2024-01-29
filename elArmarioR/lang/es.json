@@ -164,6 +164,10 @@
     "Role": "Rol",
 
     "Language": "Idioma",
-    "Language:": "Idioma:"
+    "Language:": "Idioma:",
+
+    "Don't forget to put a price on it": "Que no se te olvide ponerle un precio",
+    "Don't forget to put a price on it:": "Que no se te olvide ponerle un precio:"
+    
 
 }
