@@ -27,6 +27,9 @@
         <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- {{__('Admin - Home')}}</a></li>
         <li><a href="{{ route('admin.product.index') }}" class="nav-link text-white">- {{__('Admin - Products')}}</a></li>
         <li>
+          <a href="{{ route('product.index') }}" class="mt-2 btn bg-primary text-white">{{__('See products')}} - {{__('Shop')}}</a>
+        </li>
+        <li>
           <a href="{{ route('home.index') }}" class="mt-2 btn bg-primary text-white">{{__('Go back to the home page')}}</a>
         </li>
       </ul>

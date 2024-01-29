@@ -31,7 +31,7 @@
             <a class="nav-link active" href="{{ route('home.index') }}">Home</a> --}}
 
           {{-- <a class="nav-link active" href="{{ route('product.index') }}">Products</a> --}}
-          <a class="nav-link active" href="{{ route('product.index') }}">{{__('Home')}}</a>
+          <a class="nav-link active" href="{{ route('product.index') }}">{{__('Shop')}}</a>
 
           <a class="nav-link active" href="{{ route('cart.index') }}">{{__('Cart')}}</a>
           <a class="nav-link active" href="{{ route('home.about') }}">{{__('About')}}</a>
