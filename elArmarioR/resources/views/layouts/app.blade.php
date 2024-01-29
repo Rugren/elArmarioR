@@ -60,7 +60,7 @@
           Esto es para que nos diga el Nombre de usuario, su dinero del Balance y el Rol que desempeña. Lo muestra en la web: --}}
           <a class="nav-link active">{{Auth::user()->getName()}} / {{Auth::user()->getRole()}} ({{Auth::user()->getBalance()}}{{__('$')}}) </a>
 
-          {{-- No coge la imagen de perfil para el admin --}}
+          {{-- No coge la imagen de perfil para el header de la web --}}
           {{-- <a class="nav-link active" src="{{ asset('/img/perfilRuben.jpg') }}"></a> --}}
 
           </form>

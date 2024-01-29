@@ -2,6 +2,9 @@
 {
     "Welcome to our website!": "¡Bienvenido a nuestro sitio web!",
 
+    "English": "Inglés",
+    "Spanish": "Español",
+
     "The :attribute must be a string": "El :attribute debe ser una cadena de texto.",
     "The :surnames must be a string": ":surnames debe ser una cadena de texto.",
     "The :address must be a string": "La :address debe ser una cadena de texto.",
