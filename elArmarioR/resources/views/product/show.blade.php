@@ -106,7 +106,7 @@
                         @endif
                     @empty
                     @endforelse
-                    <p>{{__('No comments available')}}.</p>
+                    <p>{{__('No more comments available')}}.</p>
                 </div>
             </div>
     </div>
