@@ -3,7 +3,7 @@
 @section('content')
 <div class="card">
   <div class="card-header">
-    {{-- Admin Panel - Home Page (así estaba en texto, como está abajo ya traduce a los idiomas--}}
+    {{-- Admin Panel - Home Page (así estaba en texto, pero como está abajo ya traduce a los idiomas--}}
     {{__('Admin Panel - Home Page')}}
   </div>
   <div class="card-body">

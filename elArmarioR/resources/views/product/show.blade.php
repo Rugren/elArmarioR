@@ -84,7 +84,7 @@
                     <input type="hidden" name="user_id" value="{{ $viewData['userId'] }}">
                     {{-- <button type="submit" class="btn btn-primary">{{__('Send')}}</button> --}}
                     {{-- Para el texto enriquecido --}}
-                    <button type="submit" class="btn btn-primary" onclick="updateTextarea()">{{__('Send')}}</button>
+                    <button type="submit" class="btn btn-primary" onclick="updateTextarea()">{{__('Send comment')}}</button>
                 </form>
 
         </div>
@@ -106,6 +106,8 @@
                         @endif
                     @empty
                     @endforelse
+                    {{-- Puesto aquí para que se vea siempre, estaba puesto en 1-2 líneas más arriba, 
+                    para que nos lo mostrase si no hubiesen comentarios, pero no lo mostraba, por eso mostrado nosotros. --}}
                     <p>{{__('No more comments available')}}.</p>
                 </div>
             </div>
