@@ -25,4 +25,7 @@ return [
     'ProductInformation' => ' - Información del producto',
     'AllOfComments' => 'Todos los comentarios',
 
+    'HomePage' => 'Página de inicio',
+    
+
 ];

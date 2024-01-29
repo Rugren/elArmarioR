@@ -2,6 +2,11 @@
 {
     "Welcome to our website!": "Welcome to our website!",
     
+    "The :attribute must be a string": "The :attribute must be a string.",
+    "The :surnames must be a string": ":surnames must be a string.",
+    "The :address must be a string": "The :address must be a string.",
+    "The :phone must be an integer.": "The :phone must be an integer.",
+
     "The :attribute must contain at least one letter.": "The :attribute must contain at least one letter.",
     "The :attribute must contain at least one number.": "The :attribute must contain at least one number.",
     "The :attribute must contain at least one symbol.": "The :attribute must contain at least one symbol.",
@@ -16,7 +21,7 @@
     "Totaltopay": "Total to pay",
     "Addtocart": "Add to cart",
     "Purchasedone": "Purchase done",
-    "Nopurchase": "No purchases has been realized in the shop yet :("
+    "Nopurchase": "No purchases has been realized in the shop yet"
 
 
 }

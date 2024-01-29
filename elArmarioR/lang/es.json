@@ -1,6 +1,11 @@
 
 {
     "Welcome to our website!": "¡Bienvenido a nuestro sitio web!",
+
+    "The :attribute must be a string": "El :attribute debe ser una cadena de texto.",
+    "The :surnames must be a string": ":surnames debe ser una cadena de texto.",
+    "The :address must be a string": "La :address debe ser una cadena de texto.",
+    "The :phone must be an integer.": "El :phone debe ser un número entero.",
     
     "The :attribute must contain at least one letter.": "El :attribute debe contener al menos una letra.",
     "The :attribute must contain at least one number.": "El :attribute debe contener al menos un número.",
@@ -132,7 +137,6 @@
     "- Products": "- Productos",
     "Go back to the home page": "Volver a la página principal",
 
-    "Home Page": "Página de Inicio",
     "Admin - Home": "Inicio del Administrador",
     "Admin - Products": "Administrador de productos",
     
@@ -167,7 +171,14 @@
     "Language:": "Idioma:",
 
     "Don't forget to put a price on it": "Que no se te olvide ponerle un precio",
-    "Don't forget to put a price on it:": "Que no se te olvide ponerle un precio:"
+    "Don't forget to put a price on it:": "Que no se te olvide ponerle un precio:",
     
+    "Home Page": "Página de Inicio",
+    "Home Page:": "Página de Inicio:",
+
+    "You are lost? A product search may help you": "¿Andas perdido? Puede que una búsqueda de productos te ayude",
+    "You are lost? A product search may help you:": "¿Andas perdido? Puede que una búsqueda de productos te ayude:",
+    "See all products in the store": "Ver todos los productos de la tienda"
+
 
 }

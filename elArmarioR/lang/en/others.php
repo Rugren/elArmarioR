@@ -24,4 +24,7 @@ return [
     'TitleProduct' => '  - Product information',
     'ProductInformation' => ' - Product information',
     'AllOfComments' => 'All of comments',
+
+    'HomePage' => 'Home Page',
+
 ];
