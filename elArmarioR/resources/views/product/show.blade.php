@@ -64,9 +64,9 @@
 
     {{-- Esto para comentar --}}
     <div class="card mb-4">
-      <div class="card-header">
+    <div class="card-header">
         {{__('Comments of products')}}
-      </div>
+    </div>
         <div class="col-md-8">
             <div class="card-body">
                 <form method="POST" action="{{ route('comment.save', ['id' => $viewData['product']->getId()]) }}">
@@ -92,7 +92,7 @@
             {{-- Aquí muestra el/los comentarios: --}}
             <div class="col-md-12">
                 <div class="card-body">
-                  <h3>{{__('All of comments:')}} </h3>
+                <h3>{{__('All of comments:')}} </h3>
                     @forelse ($viewData['comment'] as $comment)
                         @if ($comment->getProductId() == $viewData['product']->getId())
                             <div class="comment">
@@ -105,8 +105,8 @@
                             </div>
                         @endif
                     @empty
-                        <p>{{__('No comments available')}}</p>
                     @endforelse
+                    <p>{{__('No comments available')}}.</p>
                 </div>
             </div>
     </div>
