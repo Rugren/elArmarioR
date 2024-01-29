@@ -8,7 +8,7 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
-  <title>@yield('title', 'Admin - Online Store')</title>
+  <title>@yield('title', 'Admin - elArmarioR')</title>
 </head>
 
 <body>
@@ -59,9 +59,7 @@
     <div class="container">
       <small>
         Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
-          href="https://twitter.com/danielgarax">
-          Daniel Correa
-        </a> - <b>Paola Vallejo</b>
+          href="https://twitter.com/rugrenrrg">Rubén García (Twitter)
       </small>
     </div>
   </div>

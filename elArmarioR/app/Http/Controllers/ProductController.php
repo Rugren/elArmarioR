@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         $viewData = [];
-        /* $viewData["title"] = "Products - Online Store";
+        /* $viewData["title"] = "Products - elArmarioR";
         $viewData["subtitle"] =  "List of products"; */
         $viewData["title"] = __('others.TitleProducts');
         $viewData["subtitle"] =  __('others.Products');
@@ -35,7 +35,7 @@ class ProductController extends Controller
         // Añadido que se muestren todos los comentarios dentro de cada producto:
         $comment = Comment::all();
 
-        /* $viewData["title"] = $product->getName()." - Online Store";
+        /* $viewData["title"] = $product->getName()." - elArmarioR";
         $viewData["subtitle"] =  $product->getName()." - Product information"; */
 
         $viewData["title"] = $product->getName() . __('others.TitleProduct');

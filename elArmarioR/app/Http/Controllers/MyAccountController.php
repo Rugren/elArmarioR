@@ -11,7 +11,7 @@ class MyAccountController extends Controller
     public function orders()
     {
         $viewData = [];
-        /*$viewData["title"] = "My Orders - Online Store";
+        /*$viewData["title"] = "My Orders - elArmarioR";
         $viewData["subtitle"] =  "My Orders";*/
 
         $viewData["title"] = __('others.TitleOrders');

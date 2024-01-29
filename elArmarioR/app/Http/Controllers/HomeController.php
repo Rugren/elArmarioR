@@ -9,8 +9,8 @@ class HomeController extends Controller
     public function index()
     {
         $viewData = [];
-        // $viewData["title"] = "Home Page - Online Store"; // Mejorado y traducido:
-        $viewData["title"] = __('others.HomePage') . " - " . "Online Store";
+        // $viewData["title"] = "Home Page - elArmarioR"; // Mejorado y traducido:
+        $viewData["title"] = __('others.HomePage') . " - " . "elArmarioR";
 
         return view('home.index')->with("viewData", $viewData);
     }
@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function about()
     {
         $viewData = [];
-        /* $viewData["title"] = "About us - Online Store";
+        /* $viewData["title"] = "About us - elArmarioR";
         $viewData["subtitle"] =  "About us";
         $viewData["description"] =  "This is an about page ...";
         $viewData["author"] = "Developed by: Your Name"; */

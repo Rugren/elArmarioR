@@ -22,7 +22,7 @@ class CartController extends Controller
         }
 
         $viewData = [];
-        // $viewData["title"] = "Cart - Online Store";
+        // $viewData["title"] = "Cart - elArmarioR";
         $viewData["title"] = __('others.TitleCart');
         // $viewData["subtitle"] =  "Shopping Cart";
         $viewData["subtitle"] = __('others.Cart');
@@ -78,7 +78,7 @@ class CartController extends Controller
             $request->session()->forget('products');
 
             $viewData = [];
-            /* $viewData["title"] = "Purchase - Online Store";
+            /* $viewData["title"] = "Purchase - elArmarioR";
             $viewData["subtitle"] =  "Purchase Status"; */
             $viewData["title"] = __('others.TitlePurchase');
             $viewData["subtitle"] =  __('others.Purchase');
