@@ -16,7 +16,7 @@
     <!-- sidebar -->
     <div class="p-3 col fixed text-white bg-dark">
       <a href="{{ route('admin.home.index') }}" class="text-white text-decoration-none">
-        <span class="fs-4">Admin Panel</span>
+        <span class="fs-4">{{__('Admin Panel')}}</span>
       </a>
 
       {{-- Metido aquí el @include para poder cambiar de idioma: @include('partials/language_switcher') --}}
@@ -34,8 +34,15 @@
     <!-- sidebar -->
     <div class="col content-grey">
       <nav class="p-3 shadow text-end">
-        <span class="profile-font">{{__('Admin')}}</span>
-        <img class="img-profile rounded-circle" src="{{ asset('/img/perfilRuben.jpg') }}">
+
+        {{-- Así con rol, pero no lo traduce (como aquí se supone que todo el que está es administrador, traducir solo lo de Admin y no puesto el rol). Puesta en la siguiente línea no comentada --}} 
+        {{-- <a class="nav-link active">{{Auth::user()->getName()}} - ({{Auth::user()->getRole()}}) ({{Auth::user()->getBalance()}}{{__('$')}}) <img class="img-profile rounded-circle" src="{{ asset('/img/perfilRuben.jpg') }}"></a> --}}
+        <a class="nav-link active">{{Auth::user()->getName()}} - <span class="profile-font">({{__('Admin')}})</span> ({{Auth::user()->getBalance()}}{{__('$')}}) <img class="img-profile rounded-circle" src="{{ asset('/img/perfilRuben.jpg') }}"></a>
+        
+        {{-- Así era solo Admin y la imagen: --}}
+        {{-- <span class="profile-font">({{__('Admin')}})</span> --}}
+        {{-- <img class="img-profile rounded-circle" src="{{ asset('/img/perfilRuben.jpg') }}"> --}}
+
       </nav>
 
       <div class="g-0 m-5">
