@@ -13,12 +13,18 @@
             {{-- Si $available_locale elegida es en(saldrá la bandera de inglaterra) 
                 Si escoge por otra lado la otra, es(saldrá el español) 
                 Está en: app.php en: 'available_locales'--}}
-            <img src="{{ asset('public/img/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw">
+
+                {{-- esto borrar, probando para que coja la foto <a href="{{$available_locale}}"></a> --}}
+
+            {{-- <img src="{{ asset('public/img/language/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
+            <img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 2vw">
             
         @else
             <a class="ml-1 underline ml-2 mr-2" href="language/{{ $available_locale }}">
                 {{-- <span>{{ $locale_name }}</span> --}}
-                <img src="{{ asset('public/img/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw">
+                {{-- <img src="{{ asset('public/img/language/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
+                {{-- <img src="{{ asset('/storage/app/public/' . '$available_locale' . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
+                <img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 2vw">
             </a>
         @endif
     @endforeach
