@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Nombres de los controladores y sus rutas, 
+por ejemplo; ProductController@index ->name("product.index") es el nombre de la url de inicio de la página producto */
+
+
+
 // El inicio que estaba por defecto:
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+
 
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name("product.index");
@@ -24,12 +30,14 @@ Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.ind
 Route::get('/cart/delete', 'App\Http\Controllers\CartController@delete')->name("cart.delete");
 Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("cart.add");
 
+// Aquí están todas las funciones a las que puede acceder un usuario registrado
 Route::middleware('auth')->group(function () {
     Route::get('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
     Route::get('/my-account/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myaccount.orders");
 
 });
 
+// Aquí están todas las funciones y todo lo que puede acceder un usuario registrado con rol admin.
 Route::middleware('admin')->group(function () {
     Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name("admin.home.index");
     Route::get('/admin/products', 'App\Http\Controllers\Admin\AdminProductController@index')->name("admin.product.index");

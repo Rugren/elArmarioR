@@ -15,11 +15,11 @@
                 Está en: app.php en: 'available_locales', el en y el es--}}
 
         {{-- IDIOMA: English --}}
-        <h6>{{__('English')}}</h6>
+        {{-- <h6>{{__('English')}}</h6> --}}
             {{-- <img src="{{ asset('public/img/language/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
-            <img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 2vw">
+            {{__('English')}}<img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 3vw">{{__('Spanish')}}
         {{-- IDIOMA: Spanish --}}
-        <h6>{{__('Spanish')}}</h6>
+        {{-- <h6>{{__('Spanish')}}</h6> --}}
         
         @else
 
@@ -28,7 +28,7 @@
                 {{-- <span>{{ $locale_name }}</span> --}}
                 {{-- <img src="{{ asset('public/img/language/' . $available_locale . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
                 {{-- <img src="{{ asset('/storage/app/public/' . '$available_locale' . '.jpg') }}" class="img-fluid rounded" style="width: 2vw"> --}}
-        <img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 2vw">
+                <img src="{{ asset('/img/' . $available_locale . '.png') }}" class="img-fluid rounded" style="width: 3vw">
             </a>
         @endif
     @endforeach
