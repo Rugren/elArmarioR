@@ -42,7 +42,7 @@
           Esto es para que si estoy logeado pueda ver el panel de administrador,
           Si estoy sin logearme(y/o no soy "admin") no puedo ver este panel para crear productos. --}}
           @if (Auth::user() && Auth::user()->getRole() == 'admin')
-          <a class="nav-link active" href="{{ route('admin.home.index') }}" style="color:rgb(43, 195, 226)">{{__('Admin Panel')}}</a>
+          <a class="nav-link active" href="{{ route('admin.home.index') }}" target="_blank" style="color:rgb(43, 195, 226)">{{__('Admin Panel')}}</a>
           @endif
 
 
