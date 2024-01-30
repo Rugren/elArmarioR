@@ -97,6 +97,8 @@
                         @if ($comment->getProductId() == $viewData['product']->getId())
                             <div class="comment">
                                 <h4 class="comment-user">{{ $comment->user->getName() }}</h4>
+                                {{-- Esto pone la fecha de los comentarios --}}
+                                <span class="date">{{ $comment->created_at->format('d/m/Y H:i') }}</span><br/>
                                 <div class="comment-text">
                                     {{ $comment->comment }}
                                 </div>

@@ -47,10 +47,6 @@ class ProductController extends Controller
         Y el comentario va asociado al Id del nombre con el que comente) 
         */
         $viewData["comment"] = $comment;
-        /* para traducir el All of comments sería algo así: 
-        $viewData["comment"] = $comment->getComments() . __('others.AllOfComments');
-        (pero no va, ya puesto en los idiomas: others.php de carpetas en y es.)
-        */
 
         $userName = null;
         $userId = null;

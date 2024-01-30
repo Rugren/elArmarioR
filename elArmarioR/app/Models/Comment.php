@@ -69,6 +69,14 @@ class Comment extends Model
     }
 
 
+    public function getCreatedAt() {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt($createdAt) {
+        $this->createdAt = $createdAt;
+    }
+
 
 
 }
