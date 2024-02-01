@@ -37,8 +37,11 @@
     </div>
 
 
-    {{-- ESTO PARA TEXTO ENRIQUECIDO --}}
+    {{-- ESTO PARA TEXTO ENRIQUECIDO (desde que reinstalé xampp no funciona 01/02/2024) --}}
+    {{-- Comentar esto para poner de nuevo los textos normales: y function initTinyMCE --}}
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    {{-- <script src=".tinymce/tinymce.min.js"></script> 
+    min 12:30 https://www.youtube.com/watch?v=MPNjXsowTa4--}}
     <script>
         function initTinyMCE() {
             tinymce.init({
@@ -97,6 +100,7 @@
                         @if ($comment->getProductId() == $viewData['product']->getId())
                             <div class="comment">
                                 <h4 class="comment-user">{{ $comment->user->getName() }}</h4>
+
                                 {{-- Esto pone la fecha de los comentarios --}}
                                 <span class="date">{{ $comment->created_at->format('d/m/Y H:i') }}</span><br/>
                                 <div class="comment-text">

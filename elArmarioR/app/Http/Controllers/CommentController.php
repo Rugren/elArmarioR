@@ -23,7 +23,7 @@ class CommentController extends Controller
         $newComment = new Comment();
         // $newComment->setComment($request->input('comment')); // así comentarios normales
         // $newComment->setComment(strip_tags($request->input('comment'))); // así con comentarios de texto enriquecido
-        $newComment->setComment(htmlspecialchars_decode(strip_tags($request->input('comment')))); // así con comentarios de texto enriquecido
+         $newComment->setComment(htmlspecialchars_decode(strip_tags($request->input('comment')))); // así con comentarios de texto enriquecido
         $newComment->setUserId($request->input('user_id'));
         $newComment->setProductId($request->input('product_id'));
         $newComment->save();
